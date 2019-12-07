@@ -36,7 +36,8 @@ namespace QuickFormat.App
         {
             if (_bound) return;
             
-            var clipboardContents = Clipboard.GetData(DataFormats.Text).ToString();
+            var clipboardContents = Clipboard.GetData(DataFormats.Text)?.ToString();
+            if (clipboardContents == null) return;
 
             try
             {
