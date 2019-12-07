@@ -6,6 +6,7 @@
                  xmlns:local="clr-namespace:QuickFormat.App"
                  xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                  mc:Ignorable="d"
+                 Icon="../icon.png"
                  Title="QuickFormat" Height="450" Width="800">
     <mah:MetroWindow.Resources>
         <Thickness x:Key="ControlMargin">0 5 0 0</Thickness>
