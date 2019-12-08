@@ -1,5 +1,5 @@
 
-# <img src="/QuickFormat.App/icon3.png" width="70px" /> Quick Format
+# <img src="/QuickFormat.App/icon3.png" width="40px" /> Quick Format
 
 A tiny .NET Core 3.1 app that pulls JSON from the clipboard and formats it.
 
