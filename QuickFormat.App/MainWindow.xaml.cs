@@ -35,19 +35,15 @@ namespace QuickFormat.App
         protected override void OnActivated(EventArgs e)
         {
             if (_bound) return;
-            
+
             var clipboardContents = Clipboard.GetData(DataFormats.Text)?.ToString();
             if (clipboardContents == null) return;
 
-            try
-            {
-                var parsed = JsonConvert.DeserializeObject(clipboardContents);
-                FormattedJson = JsonConvert.SerializeObject(parsed, Formatting.Indented);
-                _bound = true;
-            }
-            catch(Exception)
-            {
-            }
+            var parsed = Util.TryAllFormatters(clipboardContents);
+            if (parsed == null) return;
+            
+            FormattedJson = parsed;
+            _bound = true;
         }
 
         public static readonly DependencyProperty PropertyTypeProperty = DependencyProperty.Register(

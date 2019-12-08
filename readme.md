@@ -13,6 +13,3 @@ Once the window is open, the contents aren't changed again.
 ## Theme
 Change the theme in App.xaml
 `...themes/dark.red.xaml" ...`
-
-## Icon
-quick by Adrien Coquet from the Noun Project
